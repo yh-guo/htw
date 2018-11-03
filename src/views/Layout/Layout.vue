@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-on:click="closeMenuAll">
     <topbar />
     <sidebar />
     <app-main />
@@ -7,11 +7,15 @@
 </template>
 
 <script>
-// import { Header, Sidebar, AppMain } from './components'
+
 import { Topbar, Sidebar, AppMain } from './components'
+import { mapMutations } from 'vuex'
 
 export default {
   name: 'Layout',
-  components: { Topbar, Sidebar, AppMain }
+  components: { Topbar, Sidebar, AppMain },
+  methods: {
+    ...mapMutations('sidebar', ['closeMenuAll'])
+  }
 }
 </script>

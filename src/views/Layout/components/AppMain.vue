@@ -26,6 +26,7 @@ export default {
   bottom: 0;
   min-width: $main-min-width;
   z-index: $main-zindex;
+  background-color: $bg-grey-color;
   .sub-menu {
     position: absolute;
     top: 0;
