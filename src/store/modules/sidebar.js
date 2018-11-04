@@ -11,8 +11,8 @@ const sidebar = {
     closeMenu: state => {
       state.opened = 0
     },
-    openMenuAll: state => {
-      state.openedAll = 1
+    toggleMenuAll: state => {
+      state.openedAll = ~state.openedAll + 2
     },
     closeMenuAll: state => {
       state.openedAll = 0

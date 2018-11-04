@@ -1,9 +1,9 @@
 <template>
-  <div class="htw-layout-sidebar" v-bind:class="{ open: (opened || openedAll) }" @click.stop="">
+  <div class="htw-layout-sidebar" v-bind:class="{ open: (opened || openedAll) }" @click.stop>
     <div class="menu-all" v-bind:class="{ open: openedAll }"></div>
     <div class="logo">logo</div>
     <div class="menu" @mouseenter="openMenu" @mouseleave="closeMenu">
-      <div class="menu-all-btn" @click="openMenuAll">
+      <div class="menu-all-btn" @click="toggleMenuAll">
         <i class="iconfont icon-classify"></i><span>菜单列表</span>
       </div>
       <ul>
@@ -20,7 +20,7 @@ import { mapMutations, mapState } from 'vuex'
 export default {
   name: 'Sidebar',
   methods: {
-    ...mapMutations('sidebar', ['openMenu', 'closeMenu', 'openMenuAll'])
+    ...mapMutations('sidebar', ['openMenu', 'closeMenu', 'toggleMenuAll'])
   },
   computed: {
     ...mapState('sidebar', ['opened', 'openedAll'])
