@@ -1,0 +1,41 @@
+// 公共颜色文件
+@import "_import";
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei";
+  font-size: $font-size-small;
+  line-height: 1.5;
+  color: $text-color;
+  background-color: $white;
+}
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+i,
+em {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
