@@ -56,10 +56,16 @@ export default {
       width: 20px;
       height: 50px;
       margin-right: -7px;
+      cursor: pointer;
+      background-color: $bg-light-color;
     }
   }
   .main {
-    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin-left: 160px;
   }
 }

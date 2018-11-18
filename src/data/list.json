@@ -1,0 +1,365 @@
+{
+  "requestId" : "deef46cc730540fabae834e70e5973f6",
+  "serverTime" : 1542464396091,
+  "spendTime" : 2058,
+  "resultCode" : "success",
+  "data" : [ {
+    "id" : 1,
+    "name" : "库存现金",
+    "code" : 1001,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "foreignCurrencyAccounting" : false,
+    "finalRemittance" : false,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 2,
+    "name" : "银行存款",
+    "code" : 1002,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "foreignCurrencyAccounting" : false,
+    "finalRemittance" : false,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 3,
+    "name" : "其他货币资金",
+    "code" : 1012,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 4,
+    "childList" : [ {
+      "id" : 5,
+      "parentId" : 4,
+      "name" : "股票",
+      "code" : 1101001,
+      "subjectTypeId" : 1,
+      "subjectTypeName" : "资产类",
+      "balanceDirection" : 1,
+      "currencyAccounting" : "1",
+      "isStart" : true,
+      "canEdit" : 1
+    }, {
+      "id" : 6,
+      "parentId" : 4,
+      "name" : "债券",
+      "code" : 1101002,
+      "subjectTypeId" : 1,
+      "subjectTypeName" : "资产类",
+      "balanceDirection" : 1,
+      "currencyAccounting" : "1",
+      "isStart" : true,
+      "canEdit" : 1
+    }, {
+      "id" : 7,
+      "parentId" : 4,
+      "name" : "基金",
+      "code" : 1101003,
+      "subjectTypeId" : 1,
+      "subjectTypeName" : "资产类",
+      "balanceDirection" : 1,
+      "currencyAccounting" : "1",
+      "isStart" : true,
+      "canEdit" : 1
+    } ],
+    "name" : "短期投资",
+    "code" : 1101,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 8,
+    "name" : "应收票据",
+    "code" : 1121,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 9,
+    "name" : "应收账款",
+    "code" : 1122,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 10,
+    "name" : "预付账款",
+    "code" : 1123,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 11,
+    "name" : "应收股利",
+    "code" : 1131,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 12,
+    "name" : "应收利息",
+    "code" : 1132,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 13,
+    "name" : "其他应收款",
+    "code" : 1221,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 14,
+    "name" : "材料采购",
+    "code" : 1401,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 15,
+    "name" : "在途物资",
+    "code" : 1402,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 16,
+    "name" : "原材料",
+    "code" : 1403,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 17,
+    "name" : "材料成本差异",
+    "code" : 1404,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 18,
+    "name" : "库存商品",
+    "code" : 1405,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 19,
+    "name" : "商品进销差价",
+    "code" : 1407,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 2,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 20,
+    "name" : "委托加工物资",
+    "code" : 1408,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 21,
+    "name" : "周转材料",
+    "code" : 1411,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 22,
+    "name" : "消耗性生物资产",
+    "code" : 1421,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 23,
+    "name" : "长期债券投资",
+    "code" : 1501,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 24,
+    "name" : "长期股权投资",
+    "code" : 1511,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 25,
+    "name" : "固定资产",
+    "code" : 1601,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 26,
+    "name" : "累计折旧",
+    "code" : 1602,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 2,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 27,
+    "name" : "在建工程",
+    "code" : 1604,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 28,
+    "name" : "工程物资",
+    "code" : 1605,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 29,
+    "name" : "固定资产清理",
+    "code" : 1606,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 30,
+    "name" : "生产性生物资产",
+    "code" : 1621,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 31,
+    "name" : "生产性生物资产累计折旧",
+    "code" : 1622,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 2,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 32,
+    "name" : "无形资产",
+    "code" : 1701,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 33,
+    "name" : "累计摊销",
+    "code" : 1702,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 2,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 34,
+    "name" : "长期待摊费用",
+    "code" : 1801,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  }, {
+    "id" : 35,
+    "name" : "待处理财产损溢",
+    "code" : 1901,
+    "subjectTypeId" : 1,
+    "subjectTypeName" : "资产类",
+    "balanceDirection" : 1,
+    "currencyAccounting" : "1",
+    "isStart" : true,
+    "canEdit" : 1
+  } ]
+}
