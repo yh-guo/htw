@@ -3,34 +3,46 @@
     <div class="login-main">
       <h1 class="login-title">海豚网FMS系统</h1>
       <div class="login-input-item">
-        <el-input placeholder="请输入登录名" v-model="username">
+        <el-input placeholder="请输入登录名" v-model="userName">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
       </div>
       <div class="login-input-item">
-        <el-input placeholder="请输入密码" type="password" v-model="password">
+        <el-input placeholder="请输入密码" type="password" v-model="password" @keyup.enter.native="login">
           <i slot="prefix" class="el-input__icon el-icon-search"></i>
         </el-input>
       </div>
       <div class="login-button-item">
-        <el-button type="primary" @click="login">登录</el-button>
+        <el-button type="primary" @click.native.prevent="login">登录</el-button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ajax from '@/request/index'
+import http from '@/request/index'
+import { setUser } from '@/utils/user'
 export default {
   name: 'login',
   data () {
-    return { username: 'username', password: 'password' }
+    return { userName: '', password: '' }
   },
   methods: {
     login: function () {
-      ajax({
-        data: {username: this.username, password: this.password},
+      http({
+        data: {userName: this.userName, password: this.password},
+        // url: 'common/getAllCurrency',
         action: 'fmsUserService.login'
+      }).then((result) => {
+        setUser(result.data)
+        this.$router.push({path: '/main'})
+        this.$message({
+          showClose: true,
+          message: '登陆成功',
+          type: 'success'
+        })
+      }).catch((err) => {
+        console.log(err)
       })
     }
   }

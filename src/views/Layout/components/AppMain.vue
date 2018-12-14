@@ -7,7 +7,11 @@
         <div class="navbar-collapse-inner"></div>
       </div>
     </div>
-    <div class="main">main</div>
+    <div class="main">
+      <keep-alive>
+       <router-view />
+      </keep-alive>
+    </div>
   </div>
 </template>
 

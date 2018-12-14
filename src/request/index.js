@@ -1,7 +1,10 @@
 import axios from 'axios'
-// import requestConfig from 'requestConfig'
+import { Message } from 'element-ui'
+import Request from './request'
+import Response from './response'
+
 const requestConfig = {
-  BASE_URL: 'http://api-fms-test.htw.link/api?action=',
+  BASE_URL: 'http://api-fms-test.htw.link/',
   TIMEOUT: 30 * 1000
 }
 var service = axios.create({
@@ -12,11 +15,12 @@ var service = axios.create({
 // request interceptor
 service.interceptors.request.use(
   config => {
+    config.method = 'POST'
     if (config.action) {
-      config.headers['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
-      config.url = requestConfig.BASE_URL + config.action
+      config = Request.waybill(config)
+    } else if (config.url) {
+      config = Request.finance(config)
     }
-    console.log(config)
     return config
   },
   error => {
@@ -27,13 +31,22 @@ service.interceptors.request.use(
 
 // response interceptor
 service.interceptors.response.use(
-  response => response,
+  response => {
+    let res = response.data
+    const config = response.config
+    if (config.action) {
+      res = Response.waybill(response.data, config)
+    } else if (config.url) {
+      res = Response.finance(response.data, config)
+    }
+    return res
+  },
   error => {
-    // Message({
-    //   message: error.message,
-    //   type: 'error',
-    //   duration: 5 * 1000
-    // })
+    Message({
+      message: error.message,
+      type: 'error',
+      duration: 5 * 1000
+    })
     return Promise.reject(error)
   }
 )

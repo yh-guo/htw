@@ -4,18 +4,20 @@
     <div class="logo">logo</div>
     <div class="menu" @mouseenter="openMenu" @mouseleave="closeMenu">
       <div class="menu-all-btn" @click="toggleMenuAll">
-        <i class="iconfont icon-classify"></i><span>菜单列表</span>
+        <i class="iconfont icon-classify"></i>
+        <span>菜单列表</span>
       </div>
       <ul>
-        <li>{{opened}}</li>
+        <li><i class="iconfont icon-unselected"></i><router-link to="/index">首页</router-link></li>
+        <li><i class="iconfont icon-selected"></i><router-link to="/table/list">列表</router-link></li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-
 import { mapMutations, mapState } from 'vuex'
+import http from '@/request/index'
 
 export default {
   name: 'Sidebar',
@@ -24,6 +26,15 @@ export default {
   },
   computed: {
     ...mapState('sidebar', ['opened', 'openedAll'])
+  },
+  mounted: function () {
+    http({
+      action: 'systemMenuService.getAllMenu'
+    }).then(result => {
+
+    }).catch(err => {
+      console.log(err)
+    })
   }
 }
 </script>
@@ -62,17 +73,18 @@ export default {
       width: calc(100% + 20px);
       overflow-x: hidden;
       overflow-y: auto;
+      padding: 0;
     }
-    li,
-    .menu-all-btn {
+    li, .menu-all-btn {
       width: 210px;
       height: 40px;
       line-height: 40px;
       cursor: pointer;
       overflow: hidden;
+      color: $white;
       &:hover {
         background-color: $bg-dark-color;
-        color: $main-color;
+        // color: $main-color;
       }
       i {
         display: block;
@@ -82,7 +94,7 @@ export default {
         font-size: 20px;
         text-align: center;
       }
-      span {
+      span, a {
         display: block;
         margin-left: $bar-height;
       }
@@ -104,7 +116,7 @@ export default {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
     z-index: -1;
     &.open {
-      left:210px;
+      left: 210px;
     }
   }
 }
